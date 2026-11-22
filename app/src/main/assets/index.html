@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="icon" href="icon.png">
+        <link rel="apple-touch-icon" href="icons/icon-192.png">
+        <link rel="manifest" href="manifest.webmanifest">
+        <meta name="theme-color" content="#f7e9ff">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <title>New Tab</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        *::selection {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bg3.png);
+            background-repeat: repeat-x;
+            background-size: cover;
+            background-position: 0%;
+            animation-name: bg-motion;
+            animation-iteration-count: infinite;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-200px);
+        }
+        .title h1 {
+            display: inline;
+            font-size: 100px;
+            cursor: default;
+        }
+        .title h1:nth-child(1) {
+            color: blueviolet;
+        }
+        .title h1:nth-child(2) {
+            color: rgb(189, 43, 226);
+        }
+        .title h1:nth-child(3) {
+            color: rgb(226, 43, 223);
+        }
+        .title h1:nth-child(4) {
+            color: rgb(226, 43, 180);
+        }
+        .title h1:nth-child(5) {
+            color: rgb(226, 43, 141);
+        }
+        .title h1:nth-child(6) {
+            color: rgb(226, 43, 141);
+        }
+        .title h1:nth-child(7) {
+            color: rgb(226, 43, 86);
+        }
+        .search-box {
+            transform: translateY(-150px);
+            width: 40vw;
+            height: 50px;
+        }
+        form {
+            height: 100%;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            padding: 20px;
+            border: none;
+            font-size: 20px;
+            padding-right: 40px;
+            padding-left: 40px;
+            color: blueviolet;
+        }
+        input:focus {
+            border: none;
+            outline: none;
+        }
+        input::placeholder {
+            opacity: 50%;
+            color: blueviolet;
+        }
+        .gradient-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-radius: 25px;
+            padding: 15px;
+            transform: scaleY(1.2) scaleX(1.03);
+            background-image: linear-gradient(to left, blueviolet, rgb(189, 43, 226), rgb(226, 43, 223), rgb(226, 43, 180), rgb(226, 43, 141), rgb(226, 43, 141), rgb(226, 43, 86));
+            opacity: 40%;
+        }
+        .search {
+            position: absolute;
+            right: 2.5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom right, rgb(213, 167, 255), rgb(242, 191, 255), rgb(255, 176, 254), rgb(255, 176, 235), rgb(255, 167, 214), rgb(255, 166, 214), rgb(255, 172, 191));
+        }
+        .search img {
+            width: auto;
+            height: 100%;
+            cursor: pointer;
+            bottom: 0;
+            right: 0%;
+        }
+
+
+        @keyframes bg-motion {
+            from {
+                background-position: 0;
+            }
+            to {
+                background-position: 305%;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 1000px) {
+            .title {
+                transform: translateY(-50px);
+            }
+            .title h1 {
+                font-size: 90px;
+            }
+            .search-box {
+                transform: translateY(0px);
+                width: 80vw;
+                height: 50px;
+            }
+        }
+        @media (min-width: 600px) and (max-width: 800px) {
+            .title {
+                transform: translateY(-50px);
+            }
+            .title h1 {
+                font-size: 80px;
+            }
+            .search-box {
+                transform: translateY(0px);
+                width: 80vw;
+                height: 50px;
+            }
+        }
+        @media (min-width: 580px) and (max-width: 600px) {
+            .title {
+                transform: translateY(-50px);
+            }
+            .title h1 {
+                font-size: 70px;
+            }
+            .title {
+                transform: translateY(-200px);
+            }
+            .search-box {
+                transform: translateY(0px);
+                width: 80vw;
+                height: 50px;
+            }
+        }
+        @media (min-width: 300px) and (max-width: 580px) {
+            .title {
+                transform: translateY(-50px);
+            }
+            .title h1 {
+                font-size: 50px;
+            }
+            .title {
+                font-size: 70px;
+            }
+            .search-box {
+                transform: translateY(0px) scale(0.9, 0.9);
+                width: 90vw;
+                height: 50px;
+            }
+        }
+
+
+    </style>
+    <body>
+        <div class="title">
+            <h1>M</h1>
+            <h1>A</h1>
+            <h1>Y</h1>
+            <h1>M</h1>
+            <h1>O</h1>
+            <h1>N</h1>
+            <h1>A</h1>
+        </div>
+        <div class="search-box">
+            <form action="" id="form">
+                <div class="gradient-box"></div>
+                <input type="text" placeholder="Ask Maymona" id="input">
+                <div class="search"><img src="search-icon.png" alt=""></div>
+            </form>
+        </div>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./service-worker.js").catch(console.error);
+            });
+        }
+    </script>
+    </body>
+    <script>
+
+        let form = document.getElementById("form")
+        let input = document.getElementById("input")
+        let searchButton = document.getElementsByClassName("search")[0]
+
+        searchButton.onclick = function () {
+            form.requestSubmit()
+        }
+
+        form.onsubmit = function (e) {
+            e.preventDefault()
+            if (input.value.length > 0) {
+                let normalizedText = input.value.trim().replace(/\s+/g, " ")
+                if (window.AndroidBridge && AndroidBridge.search) {
+                    AndroidBridge.search(normalizedText);
+                } else {
+                    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(normalizedText)}`;
+                }
+            } else {
+                e.preventDefault()
+            }
+        }
+
+        let body = document.getElementsByClassName("body")[0]
+
+        
+
+    </script>
+</html>
